@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Faculty Registration Form</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url().'bootstrap/css/bootstrap.css';?>"></link>
- <link rel="stylesheet" type="text/css" href="<?php echo base_url().'bootstrap/css/custom.css';?>"></link>
-    <script type="text/javascript" src="<?php echo base_url().'bootstrap/js/jquery.js';?>"></script>
-<script type="text/javascript" src="<?php echo base_url().'bootstrap/js/bootstrap.js';?>"></script>
-</head>
+
+<?php
+
+$this->load->view('template/header');
+
+?>
+
+
+
+  
+
 <body>
+	<!-- Start Page Loading -->
+  <div id="loader-wrapper">
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+  </div>
+  <!-- End Page Loading -->
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -21,7 +27,7 @@
 			<div class="table-responsive">
 			<div class="col-md-12">
 				
-					<table class="table-bordered table-condensed table-striped">
+					<table class="table-bordered table-condensed table-striped" >
 					<thead>
 						<tr>
 							<td>Name</td>
@@ -33,15 +39,28 @@
 							<td>Institute</td>
 							<td>Department</td>
 							<td>Year</td>
-							<td>Employement Name</td>
+							<td>Employement Post</td>
 							<td>Employement institute</td>
-							<td>Employement Year</td>
+							<td>From</td>
+							<td>To</td>
+							<td>Academic Post</td>
+							<td>Academic Institute</td>
+							<td>From</td>
 							<td>Awards</td>
-							<td>Researches</td>
-							<td>Scientific Bodies</td>
-							<td>Books</td>
-							<td>Publications</td>
-							<td>Projects</td>
+							<td>Year</td>
+							<td>Institute</td>
+							<td>Research Title</td>
+							<td>Research Details</td>
+							<td>Research Institute</td>
+							<td>Research Year</td>
+							<td>Students Supervised</td>
+							<td>REPRESENTATION IN THE SCIENTIFIC BODIES</td>
+							<td>LIST OF PUBLICATIONS</td>
+							<td>BOOKS AND PROCEEDINGS</td>
+							<td>PhD Supervised</td>
+							<td>MPhil Supervised</td>
+							<td>Projects Completed</td>
+							<td>Selected Conferences, Meetings etc.</td>
 							
 						</tr>
 					</thead>
@@ -52,19 +71,36 @@
 							<td><?php echo $single_record->empqualifacation;?></td>
 							<td><?php echo $single_record->empemail;?></td>
 							<td><?php echo $single_record->empcontact;?></td>
-							<td><?php echo $single_record->doq;?></td>
-							<td><?php echo $single_record->doi;?></td>
-							<td><?php echo $single_record->dod;?></td>
-							<td><?php echo $single_record->doy;?></td>
-							<td><?php echo $single_record->employementn;?></td>
-							<td><?php echo $single_record->employementi;?></td>
+							<td><?php echo $single_record->Department;?></td>
+							<td><?php echo $single_record->Year;?></td>
+							<td><?php echo $single_record->emppost;?></td>
+							<td><?php echo $single_record->empuniversity;?></td>
+							<td><?php echo $single_record->empfrom;?></td>
+							<td><?php echo $single_record->empto;?></td>
 							<td><?php echo $single_record->employementy;?></td>
-							<td><?php echo $single_record->award1;?></td>
-							<td><?php echo $single_record->routput1;?></td>
-							<td><?php echo $single_record->representation1;?></td>
-							<td><?php echo $single_record->books1;?></td>
-							<td><?php echo $single_record->publication1;?></td>
-							<td><?php echo $single_record->project1;?></td>
+							<td><?php echo $single_record->acdpost;?></td>
+							<td><?php echo $single_record->acduniversity;?></td>
+							<td><?php echo $single_record->acdfrom;?></td>
+							<td><?php echo $single_record->acdto;?></td>
+							<td><?php echo $single_record->award;?></td>
+							<td><?php echo $single_record->awardyear;?></td>
+							<td><?php echo $single_record->awardinstitute;?></td>
+							<td><?php echo $single_record->Researchtitle;?></td>
+
+							<td><?php echo $single_record->Researchdetails;?></td>
+							<td><?php echo $single_record->Researchinstitute;?></td>
+							<td><?php echo $single_record->Researchyear;?></td>
+							<td><?php echo $single_record->Superviseddetails;?></td>
+							<td><?php echo $single_record->Scientficdetails;?></td>
+							<td><?php echo $single_record->Publicationsdetails;?></td>
+							<td><?php echo $single_record->Bookdetails;?></td>
+							<td><?php echo $single_record->Phdsuperviseddetails;?></td>
+							<td><?php echo $single_record->MPhilSuperviseddetails;?></td>
+							<td><?php echo $single_record->Projectsdetails;?></td>
+							<td><?php echo $single_record->Conferencesdetails;?></td>
+											
+
+
 							
 						</tr>
 					</tbody>
@@ -79,5 +115,10 @@
 			</div>
 		</div>
 	</div>
+	<?php
+
+$this->load->view('template/footer');
+
+?>
 </body>
 </html>

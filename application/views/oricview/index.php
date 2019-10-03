@@ -5,7 +5,8 @@
 	<title>Faculty Registration Form</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url().'bootstrap/css/bootstrap.css';?>"></link>
+  <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url().'/bootstrap/css/bootstrap.css';?>"></link> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  <link rel="stylesheet" type="text/css" href="<?php echo base_url().'bootstrap/css/custom.css';?>"></link>
     <script type="text/javascript" src="<?php echo base_url().'bootstrap/js/jquery.js';?>"></script>
 <script type="text/javascript" src="<?php echo base_url().'bootstrap/js/bootstrap.js';?>"></script>
@@ -139,7 +140,7 @@ https://www.w3schools.com/howto/howto_js_form_steps.asp -->
         <input type="text" class="form-control" placeholder="Designation" name="Designation" value='<?=set_value("Designation")?>'>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Qualification" name="Qualification" value='<?=set_value("Qualification")?>'>
+        <input type="text" class="form-control" placeholder="Qualification" name="qualification" value='<?=set_value("qualification")?>'>
       </div>
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Email" name="email" value='<?=set_value("email")?>'>
@@ -147,33 +148,55 @@ https://www.w3schools.com/howto/howto_js_form_steps.asp -->
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Contact" name="contact" value='<?=set_value("contact")?>'>
       </div>
- </fieldset>
-<fieldset class="addr">
-    <legend class="addr">Education Details</legend>
-   <div class="form-group">
-        <input type="text" class="form-control" placeholder="Qualification" name="doq" value='<?=set_value("doq")?>'>
+       <div class="form-group">
+        <input type="text" class="form-control" placeholder="University" name="University" value='<?=set_value("University")?>'>
       </div> 
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Institute" name="doi" value='<?=set_value("doi")?>'>
-      </div> 
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Department" name="dod" value='<?=set_value("dod")?>'>
+        <input type="text" class="form-control" placeholder="Department" name="Department" value='<?=set_value("Department")?>'>
       </div> 
          <div class="form-group">
-        <input type="text" class="form-control" placeholder="Year" name="doy" value='<?=set_value("doy")?>'>
-      </div> 
-  
+        <input type="text" class="form-control" placeholder="Year" name="Year" value='<?=set_value("Year")?>'>
+      </div>
  </fieldset>
+<!-- <fieldset class="addr">
+    <legend class="addr">Education Details</legend>
+   <div class="form-group">
+        <input type="text" class="form-control" placeholder="Qualification" name="Qualification" value='<?=set_value("doq")?>'>
+      </div> 
+      
+  
+ </fieldset> -->
  <fieldset class="addr">
     <legend class="addr">EMPLOYMENT RECORD</legend>
    <div class="form-group">
-      <input type="text" class="form-control" name="employementn" placeholder="Employement Name" value='<?=set_value("employementn")?>'> 
+      <input type="text" class="form-control" name="emppost" placeholder="Post" value='<?=set_value("post")?>'> 
    </div> 
    <div class="form-group">
-      <input type="text" class="form-control" name="employementi" placeholder="Employement Institute" value='<?=set_value("employementi")?>'> 
+      <input type="text" class="form-control" name="empuniversity" placeholder="University" value='<?=set_value("university")?>'> 
    </div> 
    <div class="form-group">
-      <input type="text" class="form-control" name="employementy" placeholder="Employement Year" value='<?=set_value("employementy")?>'> 
+      <input type="text" class="form-control" name="empfrom" placeholder="From" value='<?=set_value("empfrom")?>'> 
+   </div> 
+    <div class="form-group">
+      <input type="text" class="form-control" name="empto" placeholder="to" value='<?=set_value("empto")?>'> 
+   </div> 
+  
+ </fieldset>
+
+ </fieldset>
+ <fieldset class="addr">
+    <legend class="addr">Academic distinctions</legend>
+   <div class="form-group">
+      <input type="text" class="form-control" name="acdpost" placeholder="Post" value='<?=set_value("acdpost")?>'> 
+   </div> 
+   <div class="form-group">
+      <input type="text" class="form-control" name="acduniversity" placeholder="University" value='<?=set_value("acduniversity")?>'> 
+   </div> 
+   <div class="form-group">
+      <input type="text" class="form-control" name="acdfrom" placeholder="From" value='<?=set_value("acdfrom")?>'> 
+   </div> 
+    <div class="form-group">
+      <input type="text" class="form-control" name="acdto" placeholder="to" value='<?=set_value("acdto")?>'> 
    </div> 
   
  </fieldset>
@@ -184,13 +207,13 @@ https://www.w3schools.com/howto/howto_js_form_steps.asp -->
     <fieldset class="addr">
     <legend class="addr">Awards</legend>
    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Award 1" name="award1" value='<?=set_value("award1")?>'> 
+      <input type="text" class="form-control" placeholder="Award" name="award" value='<?=set_value("award")?>'> 
    </div> 
    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Award 2" name="award2" value='<?=set_value("award2")?>'> 
+      <input type="text" class="form-control" placeholder="Year" name="awardyear" value='<?=set_value("awardyear")?>'> 
    </div> 
    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Award 3" name="award3" value='<?=set_value("award3")?>'> 
+      <input type="text" class="form-control" placeholder="Institute" name="awardinstitute" value='<?=set_value("awardinstitute")?>'> 
    </div> 
   
  </fieldset> 
@@ -199,72 +222,93 @@ https://www.w3schools.com/howto/howto_js_form_steps.asp -->
    <fieldset class="addr">
     <legend class="addr">RESEARCH OUTPUTS</legend>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Research Output 1" name="routput1" value='<?=set_value("routput1")?>'> 
+      <input type="text" class="form-control" placeholder="Research Title" name="Researchtitle" value='<?=set_value("Researchtitle")?>'> 
    </div> 
    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Research Output 2" name="routput2" value='<?=set_value("routput2")?>'> 
+    <textarea class="form-control" placeholder="Research Details" name="Researchdetails" value='<?=set_value("Researchdetails")?>' id="" cols="30" rows="10" ></textarea>
+      <!-- <input type="textarea" class="form-control" placeholder="Details" name="Details" value='<?=set_value("Details")?>'>  -->
    </div> 
    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Research Output 3" name="routput3" value='<?=set_value("routput3")?>'> 
+      <input type="text" class="form-control" placeholder="Institute" name="Researchinstitute" value='<?=set_value("Researchinstitute")?>'> 
+   </div> 
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Year" name="Researchyear" value='<?=set_value("Researchyear")?>'> 
    </div>  
   
  </fieldset>  
 
+
+ <fieldset class="addr">
+    <legend class="addr">Students Supervised</legend>
+   <div class="form-group">
+      <textarea class="form-control" placeholder="eg. 31 PhDs, 129 MPhil " name="Superviseddetails" value='<?=set_value("Superviseddetails")?>' id="" cols="30" rows="10" ></textarea>
+   </div> 
+  
+  
+ </fieldset>  
   <fieldset class="addr">
     <legend class="addr">REPRESENTATION IN THE SCIENTIFIC BODIES</legend>
    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Representation Body 1" name="representation1" value='<?=set_value("representation1")?>'> 
+       <textarea class="form-control" placeholder="eg. Chief Patron: Crying Sky Ambassadors Kennesaw State University (CSA-Pakistan Chapter)" name="Scientficdetails" value='<?=set_value("Scientficdetails")?>' id="" cols="30" rows="10" ></textarea>
    </div> 
-   <div class="form-group">
+  <!--  <div class="form-group">
       <input type="text" class="form-control" placeholder="Representation Body 2" name="representation2" value='<?=set_value("representation2")?>'> 
    </div> 
    <div class="form-group">
       <input type="text" class="form-control" placeholder="Representation Body 3" name="representation3" value='<?=set_value("representation3")?>'> 
    </div> 
+   -->
+ </fieldset>
+
+
+
+  <fieldset class="addr">
+    <legend class="addr">LIST OF PUBLICATIONS</legend>
+   <div class="form-group">
+       <textarea class="form-control" placeholder="eg.Khan, A., N. Ali, W. Shafique, G. ur Rahman, S. Khan, G. Rahman, B. A Mian, N. Akbar and H. Ahmad. 2019. Phylogenetic study of 46 Ancient Mitochondrial Human Genomes. Adv. in Life Sci. 6(2): 71-75." name="Publicationsdetails" value='<?=set_value("Publicationsdetails")?>' id="" cols="30" rows="10" ></textarea>
+   </div> 
+   
   
- </fieldset>  
+ </fieldset>
 
      
     
   <fieldset class="addr">
     <legend class="addr">BOOKS AND PROCEEDINGS</legend>
    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Book 1" name="books1" value='<?=set_value("books1")?>'> 
-   </div> 
-   <div class="form-group">
-      <input type="text" class="form-control" placeholder="Book 2" name="books2" value='<?=set_value("books2")?>'> 
-   </div> 
-   <div class="form-group">
-      <input type="text" class="form-control" placeholder="Book 3" name="books3" value='<?=set_value("books3")?>'> 
-   </div> 
+<textarea class="form-control" placeholder="eg.Khan, W., S. M. Khan and H. Ahmad, 2018. Ethno-ecology, Human Health and Plants of the Thandiani Sub Forest Division, Abbottabad, KP, Pakistan. In Plant and Human Health. (1). 547-567). Springer, Cham." name="Bookdetails" value='<?=set_value("Bookdetails")?>' id="" cols="30" rows="10" ></textarea>   </div> 
+   
   
  </fieldset>
 
-     
-  <fieldset class="addr">
-    <legend class="addr">LIST OF PUBLICATIONS</legend>
+ <fieldset class="addr">
+    <legend class="addr">PhD Supervised</legend>
    <div class="form-group">
-      <input type="text" class="form-control" name="publication1" placeholder="Publication 1" value='<?=set_value("publication1")?>'> 
-   </div> 
-   <div class="form-group">
-      <input type="text" class="form-control" name="publication2" placeholder="Publication 2" value='<?=set_value("publication2")?>'> 
-   </div> 
-   <div class="form-group">
-      <input type="text" class="form-control" name="publication3" placeholder="Publication 3" value='<?=set_value("publication3")?>'> 
-   </div> 
+<textarea class="form-control" placeholder="eg.Shafqat, N. 2017. Potential use of tertiary gene pool of wild grass as a biotic and abiotic stress tolerant source for hexaploid wheat improvement. PhD thesis, Department of Genetics Hazara University, Mansehra, Pakistan. (Evaluation stage)." name="Phdsuperviseddetails" value='<?=set_value("Phdsuperviseddetails")?>' id="" cols="30" rows="10" ></textarea>   </div> 
+   
   
  </fieldset>
+      <fieldset class="addr">
+    <legend class="addr">MPhil Supervised</legend>
+   <div class="form-group">
+<textarea class="form-control" placeholder="eg.Khan, M. 2017. Study of mtDNA in the young deaf population of Abbottabad District. MPhil thesis. Department of Genetics Hazara University Mansehra." name="MPhilSuperviseddetails" value='<?=set_value("MPhilSuperviseddetails")?>' id="" cols="30" rows="10" ></textarea>   </div> 
+   
+  
+ </fieldset>
+  
    <fieldset class="addr">
-    <legend class="addr">Projects</legend>
+    <legend class="addr">Projects Completed</legend>
    <div class="form-group">
-      <input type="text" class="form-control" name="project1" placeholder="Project 1" value='<?=set_value("project1")?>'> 
-   </div> 
+<textarea class="form-control" placeholder="eg.Muhammad, K. and H. Ahmad. 2012. Marker assisted selection of rust resistance in sugar cane. One year Startup Research Grant, HRD/HEC grant (Rs. 0.645 million)." name="Projectsdetails" value='<?=set_value("Projectsdetails")?>' id="" cols="30" rows="10" ></textarea>    </div> 
+   
+  
+ </fieldset>
+
+ <fieldset class="addr">
+    <legend class="addr">Selected Conferences, Meetings etc.</legend>
    <div class="form-group">
-      <input type="text" class="form-control" name="project2" placeholder="Project 2" value='<?=set_value("project2")?>'> 
-   </div> 
-   <div class="form-group">
-      <input type="text" class="form-control" name="project3" placeholder="Project 3" value='<?=set_value("project3")?>'> 
-   </div> 
+<textarea class="form-control" placeholder="eg.Ahmad, H. 2015. Evaluation of production technologies for seed yield of Iron Weed. November 01-05. II. International Plant Breeding Congress & Eucarpia-oil and protein crops section conference. Antalya / Turkey." name="Conferencesdetails" value='<?=set_value("Conferencesdetails")?>' id="" cols="30" rows="10" ></textarea>    </div> 
+   
   
  </fieldset>
 
@@ -366,5 +410,6 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 	</script>
+
 </body>
 </html>

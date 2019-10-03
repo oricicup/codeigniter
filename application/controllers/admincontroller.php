@@ -89,7 +89,7 @@ class admincontroller extends CI_Controller {
 			$update=array(
 				'empname'=>$this->input->post('Name'),
 				'empdesig'=>$this->input->post('Designation'),
-				'empqualifacation'=>$this->input->post('Qualification'),
+				'empqualifacation'=>$this->input->post('qualification'),
 				'empemail'=>$this->input->post('email'),
 				'empcontact'=>$this->input->post('contact'),
 				'doq'=>$this->input->post('doq'),

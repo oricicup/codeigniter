@@ -1,52 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Faculty Registration Form</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url().'bootstrap/css/bootstrap.css';?>"></link>
- <link rel="stylesheet" type="text/css" href="<?php echo base_url().'bootstrap/css/custom.css';?>"></link>
-    <script type="text/javascript" src="<?php echo base_url().'bootstrap/js/jquery.js';?>"></script>
-<script type="text/javascript" src="<?php echo base_url().'bootstrap/js/bootstrap.js';?>"></script>
-</head>
+<?php
+
+$this->load->view('template/header');
+
+?>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-					
-				<form class="form-horizontal" method="post" action="<?php echo base_url().'admincontroller/register'?>">
-					
-					<div class="form-group">
-						<label class="col-md-2 control-label">Name</label>
-						<div class="col-md-8">
-							<input class="form-control" value="<?=set_value('name')?>" name="name"id="txtEmail"type="text"/>
+	 <!-- Start Page Loading -->
+  <div id="loader-wrapper">
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+  </div>
+  <!-- End Page Loading -->
+
+
+
+  <div id="login-page" class="row">
+    <div class="col s12 z-depth-4 card-panel">
+      <form class="login-form form-horizontal" method="post" action="<?php echo base_url().'admincontroller/register'?>">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <img src="<?php echo base_url().'bootstrap/img/oricicp.jpg';?>" alt="" class="circle responsive-img valign profile-image-login">
+            <h4>Register</h4>
+            <p class="center">Join to our community now !</p>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+							<input class="form-control" value="<?=set_value('name')?>" name="name" id="txtname" type="text"/>
+            <label for="username" class="center-align">Username</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+			<input class="form-control" value="<?=set_value('email')?>" name="email" id="txtEmail" type="email"/>
+            <label for="password">Email	</label>
+          </div>
+        </div>
+
+           <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+			<input class="form-control" name="password" value="<?=set_value('password')?>" id="txtPass" type="text"/>
+            <label for="password">Password	</label> 
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 m6 l6">
+							<a href="<?=base_url().'admincontroller/register'?>" class="btn btn-primary btn-block col-md-offset-">Register?</a>  
+							   <a href="<?=base_url().'admincontroller';?>" class="mt-2">Login?</a>
+        
+		
 						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-2 control-label">Email</label>
-						<div class="col-md-8">
-							<input class="form-control" value="<?=set_value('email')?>" name="email"id="txtEmail"type="email"/>
-						</div>
-					</div>
-			
-					<div class="form-group">
-						<label class="col-md-2 control-label">Password</label>
-						<div class="col-md-8">
-							<input class="form-control"name="password" value="<?=set_value('password')?>"id="txtPass" type="text"/>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-4 col-md-offset-2">
-							<input type="submit" class="btn btn-primary btn-block col-md-offset-" value='Register Now'/>
-							
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	
-	</div>
+
+         <!--  <div class="input-field col s6 m6 l6">
+              <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
+          </div>  -->         
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+<?php 
+
+$this->load->view('template/footer');
+
+?>
 </body>
 </html>	
 	
